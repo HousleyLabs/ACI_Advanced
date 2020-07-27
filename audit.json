@@ -1,0 +1,66 @@
+{
+    "audit_list": [
+ 
+        {"Section": "************ Fabric"},
+        { 
+            "url":"/api/node/class/fabricPod.json",
+            "name":"pods"
+        },
+        { 
+            "url": "/api/node/class/topSystem.json?&order-by=topSystem.topSystem.dn",
+            "name":"node-sys"
+        },
+        { 
+            "url": "/api/node/class/fabricNode.json?&order-by=fabricNode.dn",
+            "name":"node-detail"
+        },      
+        { 
+            "url": "/api/node/class/l1PhysIf.json?&order-by=l1PhysIf.dn",
+            "name":"intf-phys"
+        },      
+        { 
+            "url":"/api/node/class/pcRsMbrIfs.json?&order-by=pcRsMbrIfs.tDn",
+            "name":"intf-pc"
+        },      
+
+        {"Section": "************ BGP"},
+        { 
+            "url": "/api/node/class/bgpAsP.json?&order-by=bgpAsP.modTs|desc",
+            "name":"bgp"
+        },
+        { 
+            "url":"/api/node/class/bgpRRNodePEp.json?&order-by=bgpRRNodePEp.dn",
+            "name":"bgp-rr"
+        },
+        
+        {"Section": "************ Time"},
+        { 
+            "url": "/api/node/mo/uni/fabric/format-default.json",
+            "name":"time-zone"
+        },        
+        { 
+            "url":  "/api/node/class/datetimePol.json?&order-by=datetimePol.modTs|desc",
+            "name":"ntp"
+        },
+
+        {"Section": "************ DNS"},
+        { 
+            "url": "/api/node/class/dnsProfile.json?&order-by=dnsProfile.modTs|desc",
+            "name":"dns"
+        },
+
+        {"Section": "************ Tenants"},
+        { 
+            "url": "/api/node/class/fvTenant.json",
+            "name":"tenants"
+        }
+
+        ],
+
+    "parked":[
+        "uni/tn-mgmt.json",
+        "uni.json?query-target=children",
+        "topology/pod-1.json"
+    ]
+
+}
